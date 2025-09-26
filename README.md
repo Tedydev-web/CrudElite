@@ -1,4 +1,4 @@
-# CrudElite - Crud in Asp.Net Core MVC C# Web App 🚀
+# CrudEliteNet - Crud in Asp.Net Core MVC C# Web App 🚀
 
 ## What is Crud?
 
