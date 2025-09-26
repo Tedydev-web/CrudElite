@@ -1,0 +1,40 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+**When generating a Git commit message, follow EXACTLY these constraints:**
+
+- **Format:** `type(scope): Subject`
+- **Allowed `type`:** `feat|fix|docs|style|refactor|test|chore|perf|revert|ci|build|i18n`
+- **Required `scope`:** `api|frontend|backend|docs|tests|config|chore|build|deps|auth|db|ui|perf|security`
+- **Subject:** Sentence case, **≤ 50 chars**, no period at end
+- **Emoji:** Put **one** emoji **after** the colon (e.g. `type(scope): 🔧 Subject`)
+- **Body:** If needed, add a blank line, then bullets.
+- **Footer:** If present, add a blank line before footer (e.g., `BREAKING CHANGE:` or references).
+- **Never** output any other format. If the change cannot fit the rules, ask for a valid `type/scope/subject`.
+
+**Template to use:**
+
+```
+type(scope): 🔧 Subject in sentence case (<= 50 chars)
+
+- Bullet 1 (optional)
+- Bullet 2 (optional)
+```
+
+**Examples (valid):**
+
+```
+chore(config): 🔄 Rename project to "CrudEliteNet"
+fix(api): 🐛 Handle null token in AuthMiddleware
+feat(ui): ✨ Add sortable columns to product table
+```
+
+**Examples (reject):**
+
+- Missing scope
+- Subject > 50 chars
+- Wrong type not in the allow-list
+- No emoji after colon
